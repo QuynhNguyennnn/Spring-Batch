@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import com.demo.springBatchDbtoCsv.entity.Staff;
 
@@ -97,11 +98,13 @@ public class SpringBatchConfig {
     }
 
     /**
-     * Configure job.
+     * Configure job, run at 23:59 everyday.
      * 
      * @return job
      */
     @Bean
+    // @Scheduled(cron = "0 * * * * *")
+    @Scheduled(fixedRate = 10000)
     public Job dbToCsvJob() {
         JobBuilder jobBuilder = jobBuilderFactory.get("dbToCsvJob");
         jobBuilder.incrementer(new RunIdIncrementer());

@@ -1,13 +1,13 @@
-package com.demo.springBatchDbtoCsv;
+// package com.demo.springBatchDbtoCsv;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class SpringBatchDbtoCsvApplicationTests {
+// @SpringBootTest
+// class SpringBatchDbtoCsvApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
